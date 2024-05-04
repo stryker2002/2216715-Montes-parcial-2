@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% block titulo %} Tienda virtual {% endblock %} {%
+block contenido %}
+<table align="center">
+    {% for producto in productos %}
+    <tr>
+        <td>{{ producto.marca }}</td>
+        <td>
+            <a href="{{ url_for('ruta_productos', pid=producto.id) }}"
+                >{{ producto.nombre }}</a
+            >
+        </td>
+        <td style="text-align: right">{{ "{:,}".format(producto.precio) }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

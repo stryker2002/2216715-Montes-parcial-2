@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% block titulo %} Descripción {{producto.nombre}} {% endblock %} {%
+block contenido %}
+<table align="center">
+    <tr
+        style="
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            padding-bottom: 4px;
+        "
+    >
+        <td>
+            <img
+                src="{{ url_for('static', filename='photos/') }}{{ producto.id }}.jpg"
+                alt="{{ producto.nombre }}"
+                width="256px"
+                height="256px"
+                style="object-fit: contain;"
+            />
+        </td>
+        <td>
+            <h2>{{ producto.categoria }} - {{ producto.marca }}</h2>
+            <h1>{{ producto.nombre }}</h1>
+            <h2>{{ "{:,}".format(producto.precio) }}</h2>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="{{ url_for('ruta_raiz') }}">
+                <button>Inicio</button>
+            </a>
+        </td>
+    </tr>
+</table>
+{% endblock %}
