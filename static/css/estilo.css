@@ -1,12 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@1,200..1000&display=swap");
 
-html{
+html {
     font-family: "Mulish";
-    background: #632770;
+    background: #10591a;
 }
 
-table{
-    background-color: #FFFFFF;
+table {
+    background-color: #d5ffd9;
+    padding: 8px;
+    border-spacing: 8px 8px;
+    table-layout: auto;
+}
+
+th {
+    background-color: rgb(76, 230, 179);
+    padding: 8px;
+}
+
+td {
+    background-color: rgb(189, 245, 196);
+    padding: 8px;
+    width: 200px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .center {
@@ -14,4 +31,30 @@ table{
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 16px;
+}
+
+button {
+    background-color: rgb(76, 230, 179);
+    padding: 8px;
+    border-radius: 8px;
+    border-style: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(90, 255, 200);
+    padding: 8px;
+    border-radius: 8px;
+    border-color: #10591a;
+    cursor: pointer;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #3d309a;
+    text-decoration: underline;
 }

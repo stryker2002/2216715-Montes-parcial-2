@@ -1,6 +1,13 @@
 {% extends 'base.html' %} {% block titulo %} Tienda virtual {% endblock %} {%
 block contenido %}
 <table align="center">
+    <thead>
+        <tr>
+            <th>Marca</th>
+            <th>Nombre</th>
+            <th>Valor $</th>
+        </tr>
+    </thead>
     {% for producto in productos %}
     <tr>
         <td>{{ producto.marca }}</td>
@@ -9,7 +16,7 @@ block contenido %}
                 >{{ producto.nombre }}</a
             >
         </td>
-        <td style="text-align: right">{{ "{:,}".format(producto.precio) }}</td>
+        <td>{{ "{:,}".format(producto.precio) }}</td>
     </tr>
     {% endfor %}
 </table>
